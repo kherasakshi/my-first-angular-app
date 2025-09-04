@@ -1,0 +1,16 @@
+.nav-section{
+   height: 70px;
+   background-color: aliceblue;
+   /* border: 1px solid gray;  */
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 15px; 
+}
+
+.nav-link:hover{
+    color: rgb(10, 10, 196);
+}
