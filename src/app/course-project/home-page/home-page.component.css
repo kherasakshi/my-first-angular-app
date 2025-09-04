@@ -1,0 +1,12 @@
+.main-text-span{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family:  Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.2;
+}
+
+.img-div{
+  border-radius: 50%;
+  border: 1px solid gray;
+  height: 200px;  
+}
