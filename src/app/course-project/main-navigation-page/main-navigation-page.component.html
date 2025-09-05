@@ -1,29 +1,52 @@
-<!-- <p>main-navigation-page works!</p> -->
+<!-- filepath: c:\myFirstAngularApp\my-first-angular-app\src\app\course-project\main-navigation-page\main-navigation-page.component.html -->
+<nav class="w-full p-4 rounded shadow-md flex items-center justify-between bg-white">
+  <!-- logo -->
+  <a href="#" class="logo text-2xl font-bold">
+    EDU<span class="text-blue-600">FAST.</span>
+  </a>
 
+  <!-- Hamburger button (mobile only) -->
+  <button
+    class="md:hidden text-3xl focus:outline-none"
+    (click)="isMenuOpen = !isMenuOpen"
+    aria-label="Toggle navigation"
+  >
+    <i class="fas fa-bars"></i>
+  </button>
 
-<main class="nav-section ">
-  <nav class="p-4 rounded shadow-md flex items-center justify-between">
-
-    <!-- logo -->
-    <a href="#" class="logo text-2xl font-bold">
-      EDU<span class="text-blue-600">FAST.</span>
-    </a>
-
-    <!-- nav-links -->
-    <ul class="flex space-x-6 font-medium">
-      <li>  <a [routerLink]="['/home']" routerLinkActive="text-blue-600 border-b-2 border-blue-600"
-           class="nav-link hover:text-blue-500">
-          Home
-        </a></li>
-      <li><a href="#" class="nav-link">About</a></li>
-      <li><a href="#" class="nav-link">Courses</a></li>
-      <li><a href="#" class="nav-link">Contact</a></li>
-    </ul>
-    <a href="" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 font-medium">
+  <!-- nav-links -->
+  <ul
+    class="flex-col md:flex-row md:flex space-x-0 md:space-x-6 font-medium absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none transition-all duration-300 z-10"
+    [ngClass]="{
+      'flex': isMenuOpen,
+      'hidden': !isMenuOpen,
+      'md:flex': true
+    }"
+  >
+    <li>
+      <a [routerLink]="['/home']" routerLinkActive="text-blue-600 border-b-2 border-blue-600"
+         class="nav-link hover:text-blue-500 block px-4 py-2 md:inline-block">
+        Home
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link block px-4 py-2 md:inline-block">About</a>
+    </li>
+    <li>
+      <a href="#" class="nav-link block px-4 py-2 md:inline-block">Courses</a>
+    </li>
+    <li>
+      <a href="#" class="nav-link block px-4 py-2 md:inline-block">Contact</a>
+    </li>
+    <li class="md:hidden">
+      <a href="" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 font-medium block mx-4 my-2">
         Register
-    </a>
-  </nav>
-</main>
+      </a>
+    </li>
+  </ul>
 
-
-
+  <!-- Register button (desktop only) -->
+  <a href="" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 font-medium hidden md:block">
+    Register
+  </a>
+</nav>
